@@ -48,7 +48,7 @@ def send_email_notification(outbound_email):
     msg['From'] = sender_email_address
     msg['To'] = outbound_email
     msg['Subject'] = 'Appointment Opening'
-    msg.set_content(f"Current appointment availablility now at Louisville for the unemployment office.\nCurrent time of opening is: {now}\n Sign up now at the following link: https://telegov.egov.com/lc_ui/AppointmentWizard/61")
+    msg.set_content(f"Current appointment availablility now at {desired_location} for the unemployment office.\nCurrent time of opening is: {now}\n Sign up now at the following link: https://telegov.egov.com/lc_ui/AppointmentWizard/61")
     try:
         server = smtplib.SMTP_SSL('smtp.gmail.com', 465)
         server.login(sender_email_address, sender_email_password)

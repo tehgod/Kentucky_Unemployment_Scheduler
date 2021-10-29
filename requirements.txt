@@ -1,4 +1,4 @@
 requests==2.26.0
-pywin32==301
 beautifulsoup4==4.10.0
 python-dotenv==0.19.1
+pywin32

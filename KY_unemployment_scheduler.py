@@ -32,7 +32,14 @@ def configure_stored_credentials():
         desired_location = os.getenv('DESIRED_LOCATION')
         return True
     elif user_input == 2:
-
+        sender_email_address = input("Please input sending email address.\n")
+        #verify valid email
+        sender_email_password = input("Please input sending email password.\n")
+        #verify not empty?
+        recipient_email_address = input("Will this be sent to a cell phone or email?\n")
+        while recipient_email_address not in list(range(1,3)):
+            recipient_email_address = input("Please try again. Please only put in the number of your response, and press enter.\n")
+        #verify range 1 or 2, then we need to convert phone numbers
         return True
     else:
         print ('Unexpected error, closing out application.')
